@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.scss';
+import Home from './Components/Home/Home';
+import Header from './Components/Header/Header';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import TvShows from './Components/TvShows/TvShows';
+import RecentlyAdded from './Components/Recently Added/RecentlyAdded';
+import Movies from './Components/Movies/Movies';
+import MyList from './Components/My List/MyList';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <Router>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element = {<Home/>}></Route>
+          <Route path='/tvshows' element = {<TvShows/>}></Route>
+          <Route path='/movies' element = {<Movies/>}></Route>
+          <Route path='/recently_added' element = {<RecentlyAdded/>}></Route>
+          <Route path='/mylist'element = {<MyList/>}></Route>
+          
+        </Routes>
+      </Router>
+
   );
 }
 

@@ -1,0 +1,13 @@
+// importing roboto font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:ital,wght@0,400;1,100;1,900&display=swap');
+
+// variable declaration
+$bg-color: black;
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
